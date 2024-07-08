@@ -24,7 +24,7 @@ public class task1 implements Runnable {
 			}
 
 			try {
-				Thread.sleep(10);
+				Thread.sleep(100);
 			} catch (InterruptedException e) {
 				throw new RuntimeException(e);
 			}
