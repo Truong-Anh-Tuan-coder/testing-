@@ -13,21 +13,6 @@ public class task1 implements Runnable {
 		}
 	}
 
-
-
-	public static void main(String[] args) {
-		//task 1 print even number from a thread and odd number from another thread.
-		Runnable even = new task1("Even");
-		Thread evenThread = new Thread(even);
-
-		Runnable odd = new task1("Odd") ;
-		Thread oddThread = new Thread(odd);
-
-		oddThread.start();
-		evenThread.start();
-
-	}
-
 	public void run() {
 		for (int i = 1; i < 21; i++) {
 			if (i % 2 != 0 && this.choice == Get.Odd) {
@@ -49,5 +34,18 @@ public class task1 implements Runnable {
 	enum Get {
 		Odd,
 		Even;
+	}
+
+	public static void main(String[] args) {
+		//task 1 print even number from a thread and odd number from another thread.
+		Runnable even = new task1("Even");
+		Thread evenThread = new Thread(even);
+
+		Runnable odd = new task1("Odd") ;
+		Thread oddThread = new Thread(odd);
+
+		oddThread.start();
+		evenThread.start();
+
 	}
 }
