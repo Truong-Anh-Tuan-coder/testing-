@@ -1,5 +1,7 @@
 package day13;
 
+import javax.xml.namespace.QName;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -32,15 +34,18 @@ public class excercise {
 
 
         public static int findLargestPrimeNumb(int aNumb) {
-            ArrayList<Integer> prime = new ArrayList<>();
             int largestNumb = 0;
+
+            ArrayList<Integer> prime = new ArrayList<>();
             prime.add(2);
             prime.add(3);
+
             for (int i = 4; i < aNumb; i++) {
                 if (checkPrime(i)) {
                     prime.add(i);
                 }
             }
+
             for(var element : prime){
                 if(aNumb % element == 0){
                     if( largestNumb < element){

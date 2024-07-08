@@ -6,7 +6,7 @@ import java.util.Optional;
 
 public class Excercise {
     public static void main(String[] args){
-        int     vendor_x       = 5,
+        int     x       = 5,
                 y       =10,
                 z       = 20,
                 hello   = 100;
